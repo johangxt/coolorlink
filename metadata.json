@@ -1,0 +1,6 @@
+{
+  "name": "ColorLink Pintuco",
+  "description": "Ecosistema digital inteligente de Pintuco para diagnóstico de superficies, cotización técnica, agendamiento de pintores certificados y gestión gerencial de proyectos y abastecimiento.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

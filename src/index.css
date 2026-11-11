@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --color-pintuco-blue: #0033A0;
+  --color-pintuco-blue-hover: #002575;
+  --color-pintuco-blue-light: #EBF1FF;
+  --color-pintuco-yellow: #FFC72C;
+  --color-pintuco-yellow-hover: #EBB21C;
+  --color-pintuco-yellow-light: #FFF9E6;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #F8FAFC;
+    color: #0F172A;
+  }
+}
+
+/* Print optimizations for Pintuco Official Quality & Warranty Certificate */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #pintuco-certificate, #pintuco-certificate * {
+    visibility: visible;
+  }
+  #pintuco-certificate {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 24px;
+    box-shadow: none !important;
+    border: 2px solid #0033A0 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
